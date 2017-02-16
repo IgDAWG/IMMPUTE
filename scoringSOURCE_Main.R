@@ -1,4 +1,4 @@
-SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=FALSE,Res) {
+SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=FALSE,Res=2) {
   
   require(gplots)
   
@@ -12,7 +12,7 @@ SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=
   # Mask - logical, should subjects with untrained alleles be masked? Default = F
   # Bar - string, position of color bar on plots: Up or Down. Default="Down"
   # Copy - logical, should same genotype level probabilities be used for each allele?
-  # Res - Numeric, Resolution Desired: 1 or 2
+  # Res - Numeric, Resolution Desired: 1 or 2. Default=2
   #
   # 1) This script reads in accessory files that must be contained within a defined common Global directory: GlobalDir
   #     - scoringSource_Functions.R
