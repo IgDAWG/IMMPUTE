@@ -1,24 +1,25 @@
-SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=FALSE,Res) {
+SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=FALSE,Res=2) {
   
   require(gplots)
   
   # Script is limited by locus: A,B,C,DRB1,DQB1
   
-  # Argument Definitions and acceptable values
-  # fileName - string, file name of text data file, UTF-8, tab delimited
-  # AncLevel - string, desired ancestry level to analyze: Pop, Geo, AL1, AL2'
-  # DataDir - string, path for text data file
-  # GlobalDir - string, path for accessory files
-  # Mask - logical, should subjects with untrained alleles be masked? Default = F
-  # Bar - string, position of color bar on plots: Up or Down. Default="Down"
+  # Argument Definitions and acceptable values:
+  # fileName - string, file name of text data file, UTF-8, tab delimited.
+  # AncLevel - string, desired ancestry level to analyze: Pop, Geo, AL1, AL2.
+  # DataDir - string, path for text data file.
+  # GlobalDir - string, path for accessory files.
+  # Mask - logical, should subjects with untrained alleles be masked? Default = F.
+  # Bar - string, position of color bar on plots: Up or Down. Default="Down".
   # Copy - logical, should same genotype level probabilities be used for each allele?
-  # Res - Numeric, Resolution Desired: 1 or 2
+  # Res - Numeric, Resolution Desired: 1 or 2. Default=2.
   #
   # 1) This script reads in accessory files that must be contained within a defined common Global directory: GlobalDir
   #     - scoringSource_Functions.R
+  #    Empty versions of following text files provided on GitHub
   #     - Known_HLA_Genotypes.txt
   #       header: Known.id,Locus,Allele 1,Allele 2,Allele 1 2D,Allele 2 2D,Allele 1 4D,Allele 2 4D,Allele1G,Allele2G,Allele1P,Allele2P
-  #     - HLA_G_Groups.txt & HLA_P_Groups.txt (Database Version: 2013-04-17 at time of scrtip construction)
+  #     - HLA_G_Groups.txt & HLA_P_Groups.txt (Database Version: 2013-04-17 at time of script construction)
   #       header: Known.id,Locus,Allele
   #     - Known_Demographics.txt
   #       header: Known.id,Population,Geography,AL1,AL2
@@ -26,6 +27,8 @@ SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=
   #       header: Known.id,Locus,Allele
   #     - Known_MASK.txt
   #       header: sampleid,A,B,C,DRB1,DQB1
+  #       Mask is a file of 1's and/or NA's whether or not you want a specific subject to be masked for that locus.
+  #       1 = No Masking, NA = Masking
   # 2) Header definitions:
   #       known.id - Sample ID for known genotypes
   #       Locus - HLA Locus
