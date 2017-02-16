@@ -1,0 +1,1 @@
+Known.id	Locus	Allele 1	Allele 2	Allele 1 2D	Allele 2 2D	Allele 1 4D	Allele 2 4D	Allele1G	Allele2G	Allele1P	Allele2P
