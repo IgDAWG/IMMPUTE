@@ -12,11 +12,7 @@ SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=
   # Mask - logical, should subjects with untrained alleles be masked? Default = F.
   # Bar - string, position of color bar on plots: Up or Down. Default="Down".
   # Copy - logical, should same genotype level probabilities be used for each allele?
-<<<<<<< HEAD
   # Res - Numeric, Resolution Desired: 1 or 2. Default=2.
-=======
-  # Res - Numeric, Resolution Desired: 1 or 2. Default=2
->>>>>>> 3336edf573cc79307b673ed85eb5ceb46dbfdc62
   #
   # 1) This script reads in accessory files that must be contained within a defined common Global directory: GlobalDir
   #     - scoringSource_Functions.R
@@ -36,12 +32,12 @@ SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=
   # 2) Header definitions:
   #       known.id - Sample ID for known genotypes
   #       Locus - HLA Locus
-  #       Allele - Full field Allele name
-  #       Allele 1/Allele 2 - Full field name for 1st and 2nd Allele of a given locus genotype
+  #       Allele - Full field allele name
+  #       Allele 1/Allele 2 - Full field name for 1st and 2nd allele of a given locus genotype
   #       Allele 1 2D/Allele 2 2D - 2 digit (1-Field) allele name
   #       Allele 1 4D/Allele 2 4D - 4 digit (2-Field) allele name
-  #       Allele1G / Allele2G - 1-Field and 2-Field G group designations
-  #       Allele1P / Allele2P - 1-Field and 2-Field P group designations
+  #       Allele1G / Allele2G - 1-Field and 2-Field G group designations respectively
+  #       Allele1P / Allele2P - 1-Field and 2-Field P group designations respectively
   #       Population, Geography, AL1 (Ancestry Level 1), AL2 (Ancestry Level 2) - user defined ancestry information
   # 3) Required package: gplots
 
