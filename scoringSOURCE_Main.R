@@ -1002,7 +1002,3 @@ SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=
   setwd(MainDir)
   
 }
-
-
-
-
