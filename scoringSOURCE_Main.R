@@ -48,6 +48,7 @@ SCOREPGM <- function(fileNAME,AncLevel,DataDir,GlobalDir,Mask=F,Bar="Down",Copy=
   # Builds: GTYPE, DEMO, Loci, KnownUNAll, GGROUPS 
   
   MainDir <- getwd()
+  on.exit(setwd(MainDir), add = TRUE)
   
   setwd(GlobalDir)
   source('scoringSOURCE_Functions.R')
